@@ -130,7 +130,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/AdminLogin"
+        android:id="@+id/adminButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

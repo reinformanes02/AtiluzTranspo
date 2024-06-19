@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Start extends AppCompatActivity {
 
+    private String selectedRole;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,18 @@ public class Start extends AppCompatActivity {
         roleSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selectedRole = parent.getItemAtPosition(position).toString();
+                selectedRole = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+
+        Button selectButton = findViewById(R.id.startButton);
+        selectButton.setOnClickListener(view -> {
+            if (selectedRole != null) {
                 switch (selectedRole) {
                     case "Driver":
                         startActivity(new Intent(Start.this, DriverLogs.class));
@@ -37,12 +50,12 @@ public class Start extends AppCompatActivity {
                     case "Admin":
                         startActivity(new Intent(Start.this, Admin.class));
                         break;
+                    default:
+                        // Handle case where no valid role is selected
+                        break;
                 }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Do nothing
+            } else {
+                // Handle case where no role is selected yet
             }
         });
     }
