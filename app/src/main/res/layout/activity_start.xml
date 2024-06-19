@@ -63,6 +63,7 @@
 
 
     <Spinner
+        android:id="@+id/roleSpinner"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:layout_above="@+id/exitButton"
