@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="1dp"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        app:srcCompat="@android:drawable/dialog_holo_light_frame" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="334dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="306dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/imageView5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="431dp"
+        android:text="Choose Account"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Spinner
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/exitButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/rounded_green"
+        android:entries="@array/role_array" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="73dp"
+        android:background="@drawable/rounded_green"
+        android:padding="16dp"
+        android:text="exit"
+        android:textColor="@android:color/white" />
+
+
+
+</RelativeLayout>

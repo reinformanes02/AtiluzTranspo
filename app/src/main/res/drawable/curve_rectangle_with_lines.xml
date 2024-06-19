@@ -1,0 +1,28 @@
+<!-- rounded_rectangle_with_outline.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White rounded rectangle background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- White color -->
+            <corners android:radius="20dp" /> <!-- Adjust the radius as needed for the curve -->
+        </shape>
+    </item>
+
+    <!-- Blue outline -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Transparent color -->
+            <stroke android:width="2dp" android:color="#0077FF" /> <!-- Blue color outline -->
+            <corners android:radius="20dp" /> <!-- Adjust the radius to match the background -->
+        </shape>
+    </item>
+
+    <!-- Green outline -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Transparent color -->
+            <stroke android:width="2dp" android:color="#00FF00" /> <!-- Green color outline -->
+            <corners android:radius="20dp" /> <!-- Adjust the radius to match the background -->
+        </shape>
+    </item>
+</layer-list>

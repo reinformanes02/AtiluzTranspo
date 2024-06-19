@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AtiluzTranspo</string>
+
+    <string-array name="role_array">
+        <item>Admin</item>
+        <item>Driver</item>
+        <item>Passenger</item>
+    </string-array>
+</resources>
