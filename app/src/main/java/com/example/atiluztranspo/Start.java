@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Start extends AppCompatActivity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
@@ -26,12 +27,16 @@ public class Start extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedRole = parent.getItemAtPosition(position).toString();
-                if (selectedRole.equals("Driver")) {
-                    Intent intent = new Intent(Start.this, DriverLogs.class);
-                    startActivity(intent);
-                } else if (selectedRole.equals("Passenger")) {
-                    Intent intent = new Intent(Start.this, MainActivity.class);
-                    startActivity(intent);
+                switch (selectedRole) {
+                    case "Driver":
+                        startActivity(new Intent(Start.this, DriverLogs.class));
+                        break;
+                    case "Passenger":
+                        startActivity(new Intent(Start.this, MainActivity.class));
+                        break;
+                    case "Admin":
+                        startActivity(new Intent(Start.this, Admin.class));
+                        break;
                 }
             }
 

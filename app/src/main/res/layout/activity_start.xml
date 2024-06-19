@@ -41,6 +41,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/title" />
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="306dp"
@@ -50,9 +51,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="59dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginBottom="431dp"
+        android:layout_marginBottom="419dp"
         android:text="Choose Account"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -61,17 +62,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <Spinner
         android:id="@+id/roleSpinner"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/exitButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="49dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="301dp"
         android:background="@drawable/rounded_green"
         android:entries="@array/role_array" />
 
@@ -90,6 +90,20 @@
         android:text="exit"
         android:textColor="@android:color/white" />
 
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="189dp"
+        android:background="@drawable/rounded_green"
+        android:padding="16dp"
+        android:text="start"
+        android:textColor="@android:color/white" />
 
 
 </RelativeLayout>
