@@ -136,27 +136,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="213dp"
-        android:layout_marginBottom="73dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/rounded_green"
         android:padding="16dp"
         android:text="LOGIN"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/RegisterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="222dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="73dp"
-        android:background="@drawable/rounded_green"
-        android:padding="16dp"
-        android:text="REGISTER"
         android:textColor="@android:color/white" />
 
 
