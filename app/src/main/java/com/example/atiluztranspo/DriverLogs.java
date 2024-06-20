@@ -98,7 +98,7 @@ public class DriverLogs extends AppCompatActivity {
         protected void onPostExecute(String result) {
             if (result.contains("success")) {
                 //Login successful, start AdminDashboard activity
-                Intent intent = new Intent(DriverLogs.this, AdminDashboard.class);
+                Intent intent = new Intent(DriverLogs.this, DriverDasboard.class);
                 startActivity(intent);
                 Toast.makeText(DriverLogs.this, "Login successful!", Toast.LENGTH_SHORT).show(); // Placeholder for success
             } else {

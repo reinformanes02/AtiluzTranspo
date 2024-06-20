@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AtiluzTranspo"
         tools:targetApi="31">
         <activity
+            android:name=".DriverDasboard"
+            android:exported="false" />
+        <activity
             android:name=".AdminDashboard"
             android:exported="false" />
         <activity
