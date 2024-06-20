@@ -1,72 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminDashboard">
 
-    <!-- Background Image -->
-    <ImageView
-        android:id="@+id/imageViewBackground"
+    <!-- Main Content -->
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/imageViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bg"
+            android:alpha="0.5" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="219dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="179dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/title" />
+    </RelativeLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/bg"
-        android:alpha="0.5" />
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/drawer_header" />
 
-    <!-- RecyclerView to display driver details -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewDrivers"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:background="@android:color/transparent" />
-
-    <!-- Button to add a new driver -->
-    <Button
-        android:id="@+id/buttonAddDriver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/rounded_green" />
-
-    <!-- Button to delete selected driver(s) -->
-    <Button
-        android:id="@+id/buttonDeleteDriver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/rounded_green"
-        android:layout_toStartOf="@id/buttonAddDriver" />
-
-    <!-- Button to edit selected driver -->
-    <Button
-        android:id="@+id/buttonEditDriver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/rounded_green"
-        android:layout_toStartOf="@id/buttonDeleteDriver" />
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
